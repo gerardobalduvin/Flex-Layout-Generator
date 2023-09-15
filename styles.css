@@ -885,3 +885,48 @@ textarea.input {
         font-size: 0.4rem; /* Further adjust font size for smaller screens */
     }
 }
+
+
+
+
+/*Height Medias*/
+@media (max-height: 897px) {
+    .submit-form {
+        width: 100%;
+    }
+}
+@media (max-height: 896px) {
+    #help {
+        height: 90vh;
+    }
+    .generator-content {
+        margin: 0;
+        width: 95%;
+    }
+    .generator-items {
+        overflow: scroll;
+    }
+    .submit-form {
+        width: 92%;
+    }
+    .social-media-shrunk {
+        padding-left: 125px;
+        gap: 7px;
+    }
+}
+@media (max-height: 700px) {
+    #help {
+        height: 100vh;
+    }
+    
+    .submit-form {
+        width: 80%;
+    }
+    .social-media-shrunk {
+        padding-left: 125px;
+        gap: 7px;
+    }
+    .submit-form {
+        width: 85%;
+    }
+}
