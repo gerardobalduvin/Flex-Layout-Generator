@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flexbox Layout Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <header>
+      <section class="header">
+        <div class="header-content">
+          <h1 id="logo">Flex Layout Generator <span class="version">1.0</span></h1>
+          <nav>
+            <ul>
+              <li><a href="#help">Help</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+
+
+    <main>
+        <section id="flexbox-generator">
+          <!-- Flexbox layout generator content here -->
+          <div class="generator-content">
+            <div class="generator-items">
+              <div class="generator-preview">
+                <div class="generator-preview-container">
+                  
+                </div>
+              </div>
+              <div id="adjustments-pannel">
+                <div class="adjustments-pannel-container">
+                    <button type="button" id="add-div">Add div</button>
+                  <button type="button" id="delete-div">Delete div</button>
+                  <div class="adjustable-buttons">
+                    <label>Change Height (px)</label>
+                    <input type="number" class="value-buttons" id="change-height" value="100">
+                  </div>
+                  <div class="adjustable-buttons">
+                    <label>Change Width (px)</label>
+                    <input type="number" class="value-buttons" id="change-width" value="100">
+                  </div>
+                  <div class="adjustable-buttons">
+                    <label>Change Left Margin (px)</label>
+                    <input type="number" class="value-buttons" id="change-left-margin" value="5">
+                  </div>
+                  <div class="adjustable-buttons">
+                    <label>Change Right Margin (px)</label>
+                    <input type="number" class="value-buttons" id="change-right-margin" value="5">
+                  </div>
+                  <div class="adjustable-buttons">
+                    <label>Change Top Margin (px)</label>
+                    <input type="number" class="value-buttons" id="change-top-margin" value="5">
+                  </div>
+                  <div class="adjustable-buttons">
+                    <label>Change Bottom Margin (px)</label>
+                    <input type="number" class="value-buttons" id="change-bottom-margin" value="5">
+                  </div>
+                  <div class="selection-buttons">
+                    <label for="flex-direction">Flex-Direction</label>
+                    <select id="flex-direction">
+                      <option value="row">Row</option>
+                      <option value="column">Column</option>
+                      <option value="row-reverse">Reverse Row</option>
+                      <option value="column-reverse">Reverse Column</option>
+                    </select>
+                  </div>
+                  <div class="selection-buttons">
+                    <label for="justify-content">Justify-Content</label>
+                    <select id="justify-content">
+                      <option value="flex-start">Flex-Start</option>
+                      <option value="flex-end">Flex-End</option>
+                      <option value="center">Center</option>
+                      <option value="space-evenly">Space-Evenly</option>
+                      <option value="space-around">Space-Around</option>
+                      <option value="space-between">Space-Between</option>
+                    </select>
+                  </div>
+                  <div class="selection-buttons">
+                    <label for="align-items">Align-Items</label>
+                    <select id="align-items">
+                      <option value="flex-start">Flex-Start</option>
+                      <option value="flex-end">Flex-End</option>
+                      <option value="center">Center</option>
+                      <option value="stretch">Stretch</option>
+                      <option value="baseline">Baseline</option>
+                    </select>
+                  </div>
+                  <div class="selection-buttons">
+                    <label for="align-content">Align-Content</label>
+                    <select id="align-content">
+                      <option value="flex-start">Flex-Start</option>
+                      <option value="flex-end">Flex-End</option>
+                      <option value="center">Center</option>
+                      <option value="stretch">Stretch</option>
+                      <option value="baseline">Baseline</option>
+                    </select>
+                  </div>
+                  <div class="selection-buttons">
+                    <label for="flex-wrap">Flex-Wrap</label>
+                    <select id="flex-wrap">
+                      <option value="wrap">Wrap</option>
+                      <option value="nowrap">Nowrap</option>
+                      <option value="wrap-reverse">Wrap-Reverse</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="code-window">
+                <label for="css-code">Code Window</label>
+                <textarea id="css-code" readonly></textarea>
+              </div>
+                </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section id="help">
+          <!-- Help content here -->
+          <div class="help-container">
+            <div class="help-card-container">
+              <div class="video-card">
+                <video class="add-subtact-card-video" autoplay muted loop>
+                  <source src="Videos/Add-Subtract.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="add-subtact-card-content">
+                  <div class="video-card-title">Add and Remove</div>
+                  <p class="video-card-description">Add or remove as many divs as you want! Simply press the "Add Div" or "Delete Div" button.</p>
+                </div>
+                <div class="solid-color"></div>
+              </div>
+
+              <div class="video-card">
+                <video class="position-change-video" autoplay muted loop>
+                  <source src="Videos/Position-Change.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="position-change-card-content">
+                  <div class="video-card-title">Change Positioning</div>
+                  <p class="video-card-description">Adjust Flex-Direction, Justify-Content, Align-Items, Align-Content, and Flex-Wrap to change the positioning of the divs!</p>
+                </div>
+                <div class="solid-color"></div>
+              </div>
+
+              <div class="video-card">
+                <video class="add-subtact-card-video" autoplay muted loop>
+                  <source src="Videos/Width-Height-Change.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="width-height-change-card-content">
+                  <div class="video-card-title">Change Size</div>
+                  <p class="video-card-description">Adjust div height and width using "Change Height" and the "Change Width" tabs!</p>
+                </div>
+                <div class="solid-color"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section id="about">
+          <!-- About content here -->
+          <div class="about-content">
+            <div class="about-image">
+              <img src="images/aboutMe.JPG" alt="About Image" class="circle-cropped">
+            </div>
+            <div class="about-text">
+              <p>Flex Layout Generator 1.0 was created by me, <strong>Gerardo Balduvin</strong>, as a first project to get familiar with coding. Not only did I think this would be a great first project, but it would also be a website designed to help other new web developers on their journey to understanding CSS, and also landing that first interview. Whether it be your own personal     portfolio, or something as simple as a pamphlet, Flex Layout Generator is here to help!
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section id="contact">
+          <!-- Contact content here -->
+          <div class="contact-content">
+            <div class="contact-items">
+              <div class="contact-me">
+                <div class="first-text">Contact Me!</div>
+                <img src="Images/contactImg.png" alt="contactImg" class="contact-img">
+                <div class="social-links">
+                  <span class="second-text">Social Medias:</span>
+                  <ul class="social-media">
+                    <li><a href="https://www.instagram.com/gerardobalduvin/" target="_blank"><i class='bx bxl-instagram' ></i></a></li>
+                    <li><a href="https://twitter.com/GerardoBalduvin" target="_blank"><i class='bx bxl-twitter' ></i></a></li>
+                    <li><a href="https://github.com/gerardobalduvin" target="_blank"><i class='bx bxl-github' ></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/gerardo-balduvin-447b6828b/" target="_blank"><i class='bx bxl-linkedin' ></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="submit-form">
+                <h4 class="third-text">If you have any update ideas or found any bugs, Email Me!</h4>
+                <h4 class="third-text-small">Contact Me!</h4>
+                <form action="https://formspree.io/f/mnqkvgla" method="POST" class="contact-forms">
+                  <div class="contact-input-box">
+                    <input type="text" class="input" id="contact-name" name="name" required>
+                    <label for="">Name</label>
+                  </div>
+                  <div class="contact-input-box">
+                    <input type="email" class="input" id="contact-email" name="email" required>
+                    <label for="">Email</label>
+                  </div>
+                  <div class="contact-input-box">
+                    <input type="text" class="input" id="contact-subject" name="subject" required>
+                    <label for="">Subject</label>
+                  </div>
+                  <div class="contact-input-box">
+                    <textarea name="message" class="input" id="contact-message" required cols="30" rows="10"></textarea>
+                    <label for="">Message</label>
+                  </div>
+                  <input type="submit" class="submit-btn" value="Submit">
+                  <div class="social-links-shrunk">
+                    <ul class="social-media-shrunk">
+                      <li><a href="https://www.instagram.com/gerardobalduvin/" target="_blank"><i class='bx bxl-instagram' ></i></a></li>
+                      <li><a href="https://twitter.com/GerardoBalduvin" target="_blank"><i class='bx bxl-twitter' ></i></a></li>
+                      <li><a href="https://github.com/gerardobalduvin" target="_blank"><i class='bx bxl-github' ></i></a></li>
+                      <li><a href="https://www.linkedin.com/in/gerardo-balduvin-447b6828b/" target="_blank"><i class='bx bxl-linkedin' ></i></a></li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
